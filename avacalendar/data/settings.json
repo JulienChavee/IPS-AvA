@@ -1,0 +1,10 @@
+[
+    {
+        "key": "avacalendar_acp_avaevent_attack",
+        "default": ""
+    },
+    {
+        "key": "avacalendar_acp_avaevent_defense",
+        "default": ""
+    }
+]

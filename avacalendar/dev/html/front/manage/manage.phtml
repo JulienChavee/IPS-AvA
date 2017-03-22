@@ -1,0 +1,66 @@
+<ips:template parameters="$events, $today" />
+
+<h1 class="ipsType_pageTitle ipsType_largeTitle">{lang="avacalendar_calendar_manage_manage_title"}</h1>
+
+<a href='{url="app=avacalendar&module=calendar&controller=manage&do=add"}' class="ipsButton ipsButton_normal ipsPos_right">{lang="avacalendar_calendar_manage_manage_add"}</a>
+
+<div class="ipsClearfix"></div>
+
+<ol class='ipsDataList ipsDataList_zebra ipsSpacer_top' itemscope itemtype="http://schema.org/ItemList">
+	<meta itemprop="itemListOrder" content="Descending">
+	{{foreach $events as $event}}
+		<li class='ipsDataItem' itemprop="itemListElement">
+			<div class='ipsDataItem_main'>
+				<h4 class='ipsDataItem_title ipsType_large ipsType_break'><b>{$event->title}</b></h4>
+				<p class='ipsDataItem_meta ipsType_light'>
+					<i class='fa fa-clock-o'></i> {$event->nextOccurrence( $today, 'startDate' )->calendarDate()} - {$event->nextOccurrence( $today, 'startDate' )->localeTime( FALSE )}
+				</p>
+			</div>
+
+			<div class='ipsDataItem_generic ipsDataItem_size9'>
+				{{if $event->ava_meeting}}
+					<i class='fa fa-clock-o'></i> {$event->ava_meeting}<br>
+				{{endif}}
+
+				{{if $event->ava_position}}
+					<i class='fa fa-map-marker'></i> {$event->ava_position}
+				{{endif}}
+			</div>
+
+			<div class="ipsDataItem_generic ipsDataItem_size9">
+				{{if !is_null($event->ava_won) || $event->nextOccurrence( $today, 'endDate' ) < $today}}
+					{{if !is_null($event->ava_won)}}
+						{{if $event->ava_won}}
+							<span class='ipsBadge ipsBadge_positive'>
+								{lang="avacalendar_widget_avaevent_ava_won"}
+							</span>
+						{{else}}
+							<span class='ipsBadge ipsBadge_negative'>
+								{lang="avacalendar_widget_avaevent_ava_lost"}
+							</span>
+						{{endif}}
+					{{else}}
+						<span class='ipsBadge ipsBadge_new ipsBadge_medium avaResult{$event->id}'>
+							{lang="avacalendar_widget_avaevent_ended"}
+						</span>
+					{{endif}}
+				{{elseif $event->nextOccurrence( $today, 'startDate' ) < $today}}
+					<span class='ipsBadge ipsBadge_intermediary avaResult{$event->id}'>
+						{lang="avacalendar_widget_avaevent_in_progress"}
+					</span>
+				{{endif}}
+			</div>
+
+			<div class="ipsDataItem_generic ipsDataItem_size9">
+				{{if is_null($event->ava_won) && $event->nextOccurrence( $today, 'startDate' ) < $today}}
+					<ul class='ipsButton_split' data-controller="avacalendar.setResult">
+						<li><a data-setResult data-id='{$event->id}' data-result='1' class='ipsButton ipsButton_verySmall ipsButton_important' title='{lang="avacalendar_widget_avaevent_ava_won"}' data-ipsTooltip><i class='fa fa-check'></i></a></li>
+						<li><a data-setResult data-id='{$event->id}' data-result='0' href='#' class='ipsButton ipsButton_verySmall ipsButton_primary' title='{lang="avacalendar_widget_avaevent_ava_lost"}' data-ipsTooltip><i class='fa fa-remove'></i></a></li>
+					</ul>
+				{{elseif is_null($event->ava_won) && $event->nextOccurrence( $today, 'endDate' ) > $today}}
+					<a href='{url='app=avacalendar&module=calendar&controller=manage&do=edit&id={$event->id}'}' class='ipsButton ipsButton_primary'><i class='fa fa-pencil'></i> {lang="avacalendar_manage_edit_ava"}</a>
+				{{endif}}
+			</div>
+		</li>
+	{{endforeach}}
+</ol>

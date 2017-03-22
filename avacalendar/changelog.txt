@@ -1,0 +1,88 @@
+Todolist
+
+- Une mise en page plus propre lorsqu'il y a beaucoup d'AvA et sur plusieurs jours (Ce point est beaucoup moins sûr pour la prochaine version)
+- Pouvoir l’exporter
+- Les notifications
+- Choix de la position plus propre
+- Pagination
+- Implémenter la mise à jour d’une zone existante (~)
+- Friendly URL (/ava, /ava/add)
+- Ajouter zones dimensions
+
+1.1.0 Beta 4 - 01/12/2016
+
+- Ajout des notes concernant les AvA sur le widget
+
+1.1.0 Beta 3 - 30/11/2016
+
+- Correction d’un problème lorsqu’un AvA se situe en fin de mois. Cet AvA pouvait entraîner l’affichage de la section « Autre jour » sans aucune raison
+- Résolution d’un problème lors de la modification d’un AvA lorsqu’on est à l’heure d’hiver. La modification d’un AvA reculait l’heure de début de l’AvA d’une heure par rapport à l’heure indiquée
+
+1.1.0 Beta 2 - 23/10/2016
+
+- Correction d’AvA passés s’affichant encore (voir 1.1.0 Alpha1 et 1.0.3)
+
+1.1.0 Beta 1 - 19/10/2016
+
+- Ajout des zones manquantes et mise à jour du script pour les importer
+
+1.1.0 Alpha 2 - 19/10/2016
+
+- Résolution d’un bug lorsqu’il n’y a que des AvA 2 jours plus tard cassant l’affichage général de la page
+- Résolution d’un bug où dans certains cas les matchs en cours pouvaient ne pas être affichés
+- La couleur du badge est correctement mise à jour lorsqu’on marque un AvA encore en cours comme gagné ou perdu
+
+1.1.0 Alpha 1 - 31/07/2016
+
+- Ajout des zones d’AvA. Lors de l’ajout d’un AvA, la zone devra être sélectionnée parmi la liste définie
+- Ajout du badge « En cours » pour les AvA ayant commencé, sur la pages de gestion des AvA
+- Correction de l’affichage du badge correct lorsqu’on choisit si un AvA est gagné ou perdu
+- Les AvA terminés ne peuvent plus être modifiés
+- Les AvA sur un jour passé ne déclenchent plus l’affichage du widget (car sa date de fin est sur le jour suivant) [Fix définitif pour la mise à jour 1.0.3]
+- Résolution d’un bug où les AvA étant prévu sur un mois différent que celui en cours n’étaient pas affichés
+
+1.0.3 - 31/05/2016
+- Résolution d’un problème d’affichage lorsqu’un AvA possède une date de fin sur un nouveau jour (fix temporaire. Il faut mieux gérer la sélection des évènements en BDD)
+
+1.0.2 - 26/05/2016
+- Les évènements commençant un jour et se terminant un autre jour ne sont plus affichés lors du passage au nouveau jour
+
+1.0.1 - 26/05/2016
+- Lorsqu’un AvA est commencé, il est possible de le marqué comme gagné ou perdu avant la fin des 2h prévue
+- Correction de l’extension "FrontNavigation" suite au passage de la 4.1.12
+
+1.0.1 Beta 4 - 23/05/2016
+- Correction lors de la création d’évènements (problème de création des dates à cause des timezone utilisateurs != de ‘Europe/Berlin’
+- Lors de l’édition d’un AvA, la modification de la date n’était pas enregistrée
+- Lors de l’édition, l’heure était diminuée de 2h
+- Lors de l’édition, l’heure de rendez-vous comportait les secondes avec
+- Lorsqu’aucune heure de rendez-vous n’était indiquée, ’00:00’ était enregistré et affiché
+
+1.0.1 Beta 1, 2, 3 - 23/05/2016
+- Tentative de correction des erreurs lors de la création d’évènements (problème de création des dates, à cause du format/timezone)
+
+1.0.0 - 04/05/2016
+
+- Légères améliorations de la mise en page
+- Ajout d’une page reprenant tous les AvA
+- Possibilité de marquer un AvA comme gagné ou perdu
+- Possibilité de préciser une heure/position de rendez-vous
+- La modification d'un AvA existant, par tout le monde
+
+
+1.0.0 Bêta 6 - 23/04/2016
+
+- La zone de l’AvA est affichée au dessus de ses informations (en-dessous auparavant)
+- Ajout d’une table pouvant contenir les zones des AvA
+- Ajout d’une page permettant d’ajouter des AvA, avec des informations propres aux AvA, sans passer par le calendrier (mais toujours liée au calendrier derrière)
+- Ajout de chaînes de langue manquantes
+- Le tooltip précisant l’AvA imminent affiche maintenant le nombre exact de minutes restantes avant l’AvA
+
+1.0.0 Bêta 2/3/4/5 - 21/04/2016
+
+- Les AvA s’effectuant plus tard qu’aujourd’hui ou demain sont affichés dans une section dédiées. La date leur est ajoutée
+- Corrections diverses
+
+1.0.0 Bêta 1 - 21/04/2016
+
+- Première bêta

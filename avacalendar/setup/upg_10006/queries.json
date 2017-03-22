@@ -1,0 +1,41 @@
+{
+    "1": {
+        "method": "addColumn",
+        "params": [
+            "calendar_events",
+            {
+                "name": "event_ava_won",
+                "type": "BIT",
+                "length": 1,
+                "null": true,
+                "default": null,
+                "comment": "If 1, the ava is won, else 0. NULL by default"
+            }
+        ]
+    },
+    "2": {
+        "method": "addColumn",
+        "params": [
+            "calendar_events",
+            {
+                "name": "event_ava_position",
+                "type": "VARCHAR",
+                "length": 255,
+                "null": false,
+                "default": ""
+            }
+        ]
+    },
+    "3": {
+        "method": "addColumn",
+        "params": [
+            "calendar_events",
+            {
+                "name": "event_ava_meeting",
+                "type": "time",
+                "null": true,
+                "default": null
+            }
+        ]
+    }
+}

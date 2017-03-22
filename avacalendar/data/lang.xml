@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language>
+ <app key="avacalendar" version="10019">
+  <word key="__app_avacalendar" js="0">Ava Calendar</word>
+  <word key="module__avacalendar_calendar" js="0">Ava Calendar</word>
+  <word key="frontnavigation_avacalendar" js="0">Gestion des AvA</word>
+  <word key="avacalendar_widget_avaevent_title" js="0">Liste des prochains AvA</word>
+  <word key="avacalendar_widget_avaevent_will_start" js="0">Début imminant</word>
+  <word key="avacalendar_widget_avaevent_ended" js="0">Terminé</word>
+  <word key="avacalendar_widget_avaevent_in_progress" js="0">En cours</word>
+  <word key="avacalendar_widget_avaevent_defense" js="0">Défense de territoire</word>
+  <word key="avacalendar_widget_avaevent_attack" js="0">Attaque de territoire</word>
+  <word key="avacalendar_widget_avaevent_30minutes" js="0"><![CDATA[L&#39;AvA commence dans moins de {# [0:minute][1:minute][?:minutes]}]]></word>
+  <word key="avacalendar_widget_avaevent_today" js="0">Aujourd'hui</word>
+  <word key="avacalendar_widget_avaevent_tomorrow" js="0">Demain</word>
+  <word key="avacalendar_widget_avaevent_otherday" js="0">Autres jours</word>
+  <word key="avacalendar_widget_avaevent_ava_won" js="0">Gagné</word>
+  <word key="avacalendar_widget_avaevent_ava_lost" js="0">Perdu</word>
+  <word key="avacalendar_widget_avaevent_meeting_hour" js="0">Heure de rendez-vous</word>
+  <word key="avacalendar_widget_avaevent_meeting_pos" js="0">Position de rendez-vous</word>
+  <word key="avacalendar_calendar_manage_calendar" js="0">Type d'AvA</word>
+  <word key="avacalendar_calendar_manage_date" js="0">Date</word>
+  <word key="avacalendar_calendar_manage_title" js="0">Zone</word>
+  <word key="avacalendar_calendar_manage_meeting_hour" js="0">Heure de rendez-vous</word>
+  <word key="avacalendar_calendar_manage_meeting_position" js="0">Position de rendez-vous</word>
+  <word key="avacalendar_calendar_manage_ava_added" js="0">L'AvA a bien été ajouté</word>
+  <word key="avacalendar_calendar_manage_ava_updated" js="0">L'AvA a bien été modifié</word>
+  <word key="avacalendar_calendar_manage_manage_title" js="0">Gestion des AvA</word>
+  <word key="avacalendar_calendar_manage_manage_add" js="0">Ajouter un AvA</word>
+  <word key="avacalendar_manage_edit_ava" js="0">Éditer</word>
+  <word key="avacalendar_calendar_manage_hh_mm" js="0">HH:MM</word>
+  <word key="avacalendar_calendar_manage_xx_yy" js="0">[xx,yy]</word>
+  <word key="avacalendar_calendar_manage_ava_already_finished" js="0">Impossible d'éditer cet AvA, celui-ci est déjà terminé</word>
+  <word key="avacalendar_calendar_manage_ava_error" js="0">Une erreur s'est produite lors de l'ajout de l'AvA</word>
+  <word key="avacalendar_calendar_manage_ava_invalid_zone" js="0">La zone de l'AvA doit être selectionnée parmi la liste déroulante</word>
+  <word key="avacalendar_calendar_manage_submit" js="0">Envoyer l'AvA</word>
+  <word key="menu__avacalendar_manage" js="0">Ava Calendar</word>
+  <word key="menu__avacalendar_manage_settings" js="0">Options</word>
+  <word key="avacalendar_acp_avaevent_attack" js="0">Calendrier des attaques</word>
+  <word key="avacalendar_acp_avaevent_defense" js="0">Calendrier des défenses</word>
+  <word key="avacalendar_acp_settings_title" js="0">Options</word>
+  <word key="avacalendar_ava_won" js="1">Gagné</word>
+  <word key="avacalendar_ava_lost" js="1">Perdu</word>
+ </app>
+</language>
