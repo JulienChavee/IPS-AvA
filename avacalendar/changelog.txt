@@ -9,6 +9,11 @@ Todolist
 - Friendly URL (/ava, /ava/add)
 - Ajouter zones dimensions
 
+1.1.0 - 22/03/2017
+
+- Passage sur Github
+- Ajout d’une url de check les MàJ
+
 1.1.0 Beta 4 - 01/12/2016
 
 - Ajout des notes concernant les AvA sur le widget

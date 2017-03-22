@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language>
- <app key="avacalendar" version="10019">
+ <app key="avacalendar" version="10020">
   <word key="__app_avacalendar" js="0">Ava Calendar</word>
   <word key="module__avacalendar_calendar" js="0">Ava Calendar</word>
   <word key="frontnavigation_avacalendar" js="0">Gestion des AvA</word>
