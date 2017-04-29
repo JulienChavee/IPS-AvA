@@ -9,6 +9,11 @@ Todolist
 - Friendly URL (/ava, /ava/add)
 - Ajouter zones dimensions
 
+1.1.1 - 29/04/2017
+
+- Correction d’un problème lors de l’ajout d’un AvA
+- Correction de la liste des calendriers proposés pour l’ajout d’un AvA
+
 1.1.0 - 22/03/2017
 
 - Passage sur Github
