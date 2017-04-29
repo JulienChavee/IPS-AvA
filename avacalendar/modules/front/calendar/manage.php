@@ -46,17 +46,15 @@ class _manage extends \IPS\Dispatcher\Controller
 		$endDate	= NULL;
 		
 		$calendars = array();
-		$attack = -1;
-		$defense = -1;
 
 		if ( ! empty( \IPS\Settings::i()->avacalendar_acp_avaevent_attack ) )
 		{
-			$attack = $calendars[] = \IPS\Settings::i()->avacalendar_acp_avaevent_attack;
+			$calendars[] = \IPS\Settings::i()->avacalendar_acp_avaevent_attack;
 		}
 
 		if( !empty( \IPS\Settings::i()->avacalendar_acp_avaevent_defense ) )
 		{
-			$defense = $calendars[] = \IPS\Settings::i()->avacalendar_acp_avaevent_defense;
+			$calendars[] = \IPS\Settings::i()->avacalendar_acp_avaevent_defense;
 		}
 
 		/* How many are we displaying? */
@@ -78,6 +76,21 @@ class _manage extends \IPS\Dispatcher\Controller
 
 	protected function add()
 	{
+		$calendars = array();
+
+		if ( ! empty( \IPS\Settings::i()->avacalendar_acp_avaevent_attack ) )
+		{
+			$calendars[] = \IPS\Settings::i()->avacalendar_acp_avaevent_attack;
+		}
+
+		if( !empty( \IPS\Settings::i()->avacalendar_acp_avaevent_defense ) )
+		{
+			$calendars[] = \IPS\Settings::i()->avacalendar_acp_avaevent_defense;
+		}
+
+		$where[] = array( \IPS\Db::i()->in( 'cal_id', $calendars ) );
+
+
 		if( !\IPS\Member::loggedIn()->canAccessModule( \IPS\Application\Module::get( 'calendar', 'calendar' ) ) )
 		{
 			return '';
@@ -88,6 +101,7 @@ class _manage extends \IPS\Dispatcher\Controller
 		$form->add( new \IPS\Helpers\Form\Node( 'avacalendar_calendar_manage_calendar', '' , TRUE, array(
 			'class'					=> 'IPS\calendar\Calendar',
 			'permissionCheck'		=> 'add',
+			'where'					=> $where
 		) ) );
 
 		$form->add( new \IPS\Helpers\Form\Date( 'avacalendar_calendar_manage_date', '', TRUE, array( 'time' => true ) ) );
