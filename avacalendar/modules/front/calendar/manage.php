@@ -98,12 +98,12 @@ class _manage extends \IPS\Dispatcher\Controller
 		$zones = $this->getZones();
 
 		if ( $values = $form->values() ) {
-			//$zones = array("Village de Terrdala");
-			//print_r($values['avacalendar_calendar_manage_title']);echo "<br>";print_r($zones);die();
-			if( in_array( trim( $values['avacalendar_calendar_manage_title'] ), $zones ) ) {
+			//$zones = array("Tour de la Clepsydre");
+			//print_r($values['avacalendar_calendar_manage_title'][0]);echo "<br>";print_r($zones);die();
+			if( in_array( trim( $values['avacalendar_calendar_manage_title'][0] ), $zones ) ) {
 				$event['event_container'] = ( $values[ 'avacalendar_calendar_manage_calendar' ] instanceof \IPS\Node\Model ) ? $values[ 'avacalendar_calendar_manage_calendar' ]->_id : intval( $values[ 'avacalendar_calendar_manage_calendar' ] );
 
-				$event['event_title'] = $values['avacalendar_calendar_manage_title'];
+				$event['event_title'] = $values['avacalendar_calendar_manage_title'][0];
 				
 				$event['event_dates']['start_date'] = $values['avacalendar_calendar_manage_date']->localeDate();
 				$event['event_dates']['start_time'] = $values['avacalendar_calendar_manage_date']->format('H:i');
